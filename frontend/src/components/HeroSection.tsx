@@ -1,55 +1,80 @@
-import React from 'react';
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
-interface HeroSectionProps {
-  title?: string;
-  subtitle?: string;
-  bulletHighlights?: string[];
-  ctaText?: string;
-  ctaAction?: () => void;
-  backgroundImageUrl?: string;
-}
+function HeroCarousel() {
+  const images = [
+    {
+      url: "/5.jpeg",
+      title: "Empowering Skills, Enabling Futures",
+      subtitle:
+        "BPR Pvt. I.T.I – Best ITI College in Kurukshetra | Skill-Based Technical Education",
+    },
+    {
+      url: "/1.jpeg",
+      title: "Learn From Experts",
+      subtitle: "Experienced faculty guiding you with hands-on training",
+    },
+    {
+      url: "/3.jpeg",
+      title: "Your Career, Our Mission",
+      subtitle: "Building strong foundations for a better future",
+    },
+  ];
 
-const HeroSection: React.FC<HeroSectionProps> = ({
-  title = 'UGC-Approved Online University & Degree Courses in India',
-  subtitle = 'Study with 100% Placement Assistance. Live & Recorded Lectures at your convenience.',
-  bulletHighlights = [
-    'Equivalent to Regular Degree',
-    'Live & Recorded Lectures',
-    'UGC-entitled & AICTE-Approved',
-    '200+ Hiring Partners'
-  ],
-  ctaText = 'Take the Freedom Scholarship Test (FSET)',
-  ctaAction = () => {
-    alert('FSET clicked');
-  },
-  backgroundImageUrl = '/images/hero-bg.jpg',
-}) => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
   return (
     <section
-      className="relative bg-cover bg-center text-white flex items-center min-h-screen"
-      style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+      id="home"
+      className="relative h-screen w-full flex items-center justify-center px-6 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-black/50"></div>
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
-        <p className="text-lg md:text-xl mb-8">{subtitle}</p>
-        <ul className="text-left inline-block mb-8 space-y-2">
-          {bulletHighlights.map((highlight, idx) => (
-            <li key={idx} className="flex items-center">
-              <span className="inline-block w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
-              <span className="text-lg">{highlight}</span>
-            </li>
-          ))}
-        </ul>
-        <button
-          onClick={ctaAction}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition"
+      {/* Background Carousel */}
+      <div className="absolute inset-0">
+        {images.map((img, i) => (
+          <motion.div
+            key={i}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${img.url})` }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: i === current ? 1 : 0 }}
+            transition={{ duration: 1.2 }}
+          />
+        ))}
+        {/* dark overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+
+      {/* Text Content */}
+      <div className="relative z-10 max-w-4xl text-center px-4">
+        <motion.h1
+          className="text-3xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg"
+          key={images[current].title}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          {ctaText}
-        </button>
+          {images[current].title}
+        </motion.h1>
+
+        <motion.p
+          className="text-base md:text-2xl text-white font-medium"
+          key={images[current].subtitle}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          {images[current].subtitle}
+        </motion.p>
       </div>
     </section>
   );
-};
+}
 
-export default HeroSection;
+export default HeroCarousel;
