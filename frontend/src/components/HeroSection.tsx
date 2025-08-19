@@ -33,7 +33,7 @@ function HeroCarousel() {
   return (
     <section
       id="home"
-      className="relative h-screen w-full flex items-center justify-center px-6 overflow-hidden"
+      className="relative h-[80vh] sm:h-screen w-full flex items-center justify-center px-6 overflow-hidden"
     >
       {/* Background Carousel */}
       <div className="absolute inset-0">
@@ -47,14 +47,14 @@ function HeroCarousel() {
             transition={{ duration: 1.2 }}
           />
         ))}
-        {/* dark overlay */}
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Text Content */}
-      <div className="relative z-10 max-w-4xl text-center px-4">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
         <motion.h1
-          className="text-3xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg"
+          className="text-3xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg mt-32 sm:mt-20"
           key={images[current].title}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

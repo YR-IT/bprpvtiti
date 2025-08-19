@@ -32,11 +32,11 @@ function Welcome() {
             Welcome to
           </h2>
           <h3 className="text-3xl md:text-5xl font-bold text-blue-900 mb-6">
-            BPR PRIVATE ITI
+            BPR PRIVATE ITI MASANA
           </h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Founded in 2011 by the Sangmeshwar Educational Trust, BPR
-            Pvt. I.T.I, located in Kurukshetra, Haryana, is dedicated to
+            Founded in 2007 by The Pushkar Educational Trust, BPR
+            Pvt. I.T.I Masana, located in Kurukshetra, Haryana, is dedicated to
             providing high-quality technical education and skill development. Our
             mission is to empower students to embrace change, learn from
             failures, and build a prosperous future through modern education and
@@ -79,7 +79,7 @@ function Welcome() {
           className="flex justify-center relative w-full h-[350px] md:h-[400px] overflow-hidden rounded-2xl shadow-2xl border-4 border-blue-100"
         >
           <motion.img
-            key={current} // helps framer trigger animation on change
+            key={current} 
             src={images[current]}
             alt="Welcome carousel"
             className="absolute inset-0 w-full h-full object-cover rounded-2xl"

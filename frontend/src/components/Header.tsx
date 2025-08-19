@@ -50,13 +50,13 @@ const Header: React.FC = () => {
         {/* Center Info */}
         <div className="hidden md:flex space-x-6 items-center">
           <span className="bg-blue-700 px-3 py-1 rounded text-xs">
-            ITI CODE - PR06000161
+            ITI CODE - PR0600410
           </span>
           <a
-            href="mailto:bprpvtiti@yahoo.com"
+            href="mailto:bpriti032@gmail.com"
             className="flex items-center space-x-1"
           >
-            <Mail size={14} /> <span>bprpvtiti@yahoo.com</span>
+            <Mail size={14} /> <span>bpriti032@gmail.com</span>
           </a>
         </div>
 
@@ -82,10 +82,10 @@ const Header: React.FC = () => {
             <img src="/itilogo.jpg" alt="ITI Logo" className="h-16" />
             <div>
               <h1 className="font-extrabold text-blue-900 text-4xl">
-                BPR PVT. I.T.I
+                BPR PVT. I.T.I MASANA
               </h1>
               <p className="text-lg text-gray-700 font-semibold">
-                Shahbad, Kurukshetra
+                Near Mannat Haveli, G.T. Road, Shahbad, Kurukshetra
               </p>
             </div>
           </div>
@@ -94,16 +94,16 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-8">
             
             <a
-              href="tel:+911234567890"
+              href="tel:+919068261700"
               className="flex items-center space-x-2 bg-blue-900 text-white px-4 py-2 rounded-lg shadow-md text-sm"
             >
-              <Phone size={16} /> <span>+91 1234567890</span>
+              <Phone size={16} /> <span>+91 9068261700</span>
             </a>
             <a
-              href="mailto:bprpvtiti@gmail.com"
+              href="mailto:bpriti032@gmail.com"
               className="flex items-center space-x-2 bg-blue-900 text-white px-4 py-2 rounded-lg shadow-md text-sm"
             >
-              <Mail size={16} /> <span>bprpvtiti@gmail.com</span>
+              <Mail size={16} /> <span>bpriti032@gmail.com</span>
             </a>
             <img src="/skillogo.png" alt="Skill India" className="h-16" />
           </div>
@@ -131,10 +131,10 @@ const Header: React.FC = () => {
   {/* Next Row: Institute Name + Address */}
   <div className="w-full text-center mt-2 border-t border-gray-400 pt-2">
     <h1 className="font-extrabold text-blue-900 text-4xl">
-      BPR PVT. I.T.I
+      BPR PVT. I.T.I MASANA
     </h1>
     <p className="text-base text-gray-700 font-semibold">
-      Shahbad, Kurukshetra
+      Near Mannat Haveli, G.T. Road, Shahbad, Kurukshetra
     </p>
   </div>
 </div>
@@ -144,16 +144,16 @@ const Header: React.FC = () => {
         {menuOpen && (
           <div className="md:hidden bg-blue-900 text-white px-6 py-4 space-y-4 mt-3 rounded-lg shadow-lg">
             <a
-              href="tel:+911234567890"
+              href="tel:+919068261700"
               className="flex items-center space-x-2 bg-blue-700 px-4 py-2 rounded-lg"
             >
-              <Phone size={18} /> <span>+91 1234567890</span>
+              <Phone size={18} /> <span>+91 9068261700</span>
             </a>
             <a
-              href="mailto:bprpvtiti@gmail.com"
+              href="mailto:bpriti032@gmail.com"
               className="flex items-center space-x-2 bg-blue-700 px-4 py-2 rounded-lg"
             >
-              <Mail size={18} /> <span>bprpvtiti@gmail.com</span>
+              <Mail size={18} /> <span>bpriti032@gmail.com</span>
             </a>
           </div>
         )}

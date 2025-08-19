@@ -5,7 +5,7 @@ const features = [
   {
     icon: "⭐",
     title: "Govt. Recognized",
-    desc: "Approved under ITI Code PR06000161.",
+    desc: "Approved under ITI Code PR0600410.",
   },
   {
     icon: "🎓",

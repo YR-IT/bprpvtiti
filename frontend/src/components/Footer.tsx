@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#0b2342] to-[#003c3c] text-gray-200 py-12">
+    <footer className="bg-gradient-to-b from-[#0b2342] to-[#003c3c] text-gray-200 pt-12">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10">
         {/* Logo & About */}
         <div>
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             className="w-36 mb-4"
           />
           <p className="text-sm leading-relaxed text-justify">
-            BPR Pvt. I.T.I, established in 2011 in Kurukshetra,
+            BPR Pvt. I.T.I, established in 2007 in Kurukshetra,
             Haryana, is committed to delivering quality technical education
             and skill development for a brighter, job-ready future.
           </p>
@@ -26,8 +26,9 @@ const Footer: React.FC = () => {
           <ul className="space-y-2 text-base">
             <li><a href="/" className="hover:text-white">› Home</a></li>
             <li><a href="/about" className="hover:text-white">› About Us</a></li>
-            <li><a href="/contact" className="hover:text-white">› Contact Us</a></li>
-            <li><a href="/gallery" className="hover:text-white">› Gallery</a></li>
+            <li><a href="/contact" className="hover:text-white">› Admissions</a></li>
+            <li><a href="/gallery" className="hover:text-white">› E-Learning</a></li>
+            <li><a href="/gallery" className="hover:text-white">› Contact Us</a></li>
           </ul>
         </div>
 
@@ -38,9 +39,11 @@ const Footer: React.FC = () => {
           </h3>
           <ul className="space-y-2 text-base">
             <li><a href="#" className="hover:text-white">› Electrician</a></li>
-            <li><a href="#" className="hover:text-white">› Draughtsman (Civil)</a></li>
             <li><a href="#" className="hover:text-white">› Fitter</a></li>
-            <li><a href="#" className="hover:text-white">› Welder</a></li>
+            <li><a href="#" className="hover:text-white">› Steno-English</a></li>
+            <li><a href="#" className="hover:text-white">› COPA</a></li>
+            <li><a href="#" className="hover:text-white">› Plumber</a></li>
+            <li><a href="#" className="hover:text-white">› H.S.I</a></li>
           </ul>
         </div>
 
@@ -76,8 +79,8 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700 mt-10 pt-4 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} Gyan Ganga Pvt. ITI. All rights reserved.
+      <div className="border-t border-gray-700 mt-10 pt-4 text-center text-xs text-gray-400 mb-6">
+        © {new Date().getFullYear()} BPR Pvt. ITI MASANA. All rights reserved.
       </div>
     </footer>
   );
