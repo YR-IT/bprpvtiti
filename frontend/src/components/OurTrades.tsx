@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Filter, Hammer, Wrench, ShieldCheck, ToolCase, Droplet, Monitor } from 'lucide-react';
+import { Zap, Hammer, Wrench, ShieldCheck, Droplet, Monitor } from 'lucide-react';
 
 const tradesData = [
     {
