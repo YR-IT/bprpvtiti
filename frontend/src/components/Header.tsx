@@ -50,7 +50,7 @@ const Header: React.FC = () => {
         {/* Center Info */}
         <div className="hidden md:flex space-x-6 items-center">
           <span className="bg-blue-700 px-3 py-1 rounded text-xs">
-            ITI CODE - PR0600410
+            ITI CODE - PR06000410
           </span>
           <a
             href="mailto:bpriti032@gmail.com"
