@@ -94,10 +94,10 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-8">
             
             <a
-              href="tel:+919068261700"
+              href="tel:+919996964754"
               className="flex items-center space-x-2 bg-blue-900 text-white px-4 py-2 rounded-lg shadow-md text-sm"
             >
-              <Phone size={16} /> <span>+91 9068261700</span>
+              <Phone size={16} /> <span>+91 9996964754</span>
             </a>
             <a
               href="mailto:bpriti032@gmail.com"
@@ -144,10 +144,10 @@ const Header: React.FC = () => {
         {menuOpen && (
           <div className="md:hidden bg-blue-900 text-white px-6 py-4 space-y-4 mt-3 rounded-lg shadow-lg">
             <a
-              href="tel:+919068261700"
+              href="tel:+919996964754"
               className="flex items-center space-x-2 bg-blue-700 px-4 py-2 rounded-lg"
             >
-              <Phone size={18} /> <span>+91 9068261700</span>
+              <Phone size={18} /> <span>+91 9996964754</span>
             </a>
             <a
               href="mailto:bpriti032@gmail.com"
