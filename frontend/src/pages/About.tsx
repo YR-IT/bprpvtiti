@@ -80,16 +80,19 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-0">
       {/* Hero Section */}
-      <section className="relative pt-48 md:pt-52 pb-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white overflow-hidden min-h-[70vh] flex items-center">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
+      <section className="relative overflow-hidden mt-32 md:mt-40 text-white">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "linear-gradient(rgba(30, 64, 175, 0.75), rgba(126, 34, 206, 0.7)), url('/images/img1.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
 
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 w-full">
+        <div className="relative container mx-auto px-6 md:px-12 lg:px-20 w-full min-h-[60vh] py-16 md:py-24 flex items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -99,22 +102,28 @@ const About: React.FC = () => {
             <span className="inline-block px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-8 border border-white/20">
               About BPR ITI
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Shaping Tomorrow's
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">
                 Technical Leaders
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-              Since 2007, we've been committed to providing quality technical education 
-              and empowering students with skills that matter in today's competitive world.
+            <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+              Since 2007, we've been committed to providing quality technical education and empowering students with skills that matter in today's competitive world.
             </p>
+            <div className="mt-8 flex flex-wrap gap-4 justify-center">
+              <a href="#story" className="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold transition transform hover:scale-105 hover:shadow-lg">Our Story</a>
+              <a href="/admission" className="bg-white/10 hover:bg-white/20 border border-white/30 px-6 py-3 rounded-full font-semibold">Apply Now</a>
+            </div>
           </motion.div>
         </div>
+        <svg className="block w-full text-white" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+          <path fill="currentColor" opacity="0.96" d="M0,64L48,64C96,64,192,64,288,74.7C384,85,480,107,576,117.3C672,128,768,128,864,128C960,128,1056,128,1152,122.7C1248,117,1344,107,1392,101.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" />
+        </svg>
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-white">
+      <section id="story" className="py-20 bg-white">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
